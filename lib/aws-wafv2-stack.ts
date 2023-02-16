@@ -58,12 +58,6 @@ export class AwsWafv2Stack extends cdk.Stack {
       rules.push(rule);
     });
 
-
-    var customResponseKey1 = {
-      'Content': 'waf.html',
-      'Content-Type': 'text/html'
-    };
-
     //Adding custom rules.  Just one.
     const urlBlockRule: CfnWebACL.RuleProperty = {
       name: 'blockuri',
